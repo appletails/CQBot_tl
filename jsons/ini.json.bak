@@ -1,0 +1,47 @@
+{
+    "QQqun": {
+        "id": [
+            487580544
+        ],
+        "welcome": "",
+        "shutword": []
+    },
+    "modian": {
+        "idol": "唐霖",
+        "pro_id": [
+            67452
+        ],
+        "pk": "",
+        "interval": 10
+    },
+    "administrator": [
+        476297692
+    ],
+    "admin": [],
+    "pk": {
+        "status": false,
+        "list": []
+    },
+    "today": "今日集资是否开启 todayType",
+    "todayType": false,
+    "Draw": "抽卡状态,相对路径，绝对路径",
+    "DrawType": false,
+    "cardPath": "C:/Users/Administrator/Downloads/CQP-xiaoi/酷Q Pro/data/image/",
+    "idolPath": "tl",
+    "childPath": [
+        "ssr",
+        "sr",
+        "r",
+    ],
+    "CardLevel": [
+        10,
+        50,
+        100
+    ],
+    "cardAllNum": {
+        "r": 15,
+        "sr": 7,
+        "ssr": 3
+    },
+    "oneCard": 10
+}

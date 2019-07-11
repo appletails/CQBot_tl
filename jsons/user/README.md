@@ -1,0 +1,1 @@
+使用前请在这个文件夹里建立 `bind.json` 和 `user.json`

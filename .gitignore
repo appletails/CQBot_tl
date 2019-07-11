@@ -1,0 +1,5 @@
+/__pycache__/
+/jsons/order/*.json
+/jsons/ini.json
+/jsons/user/*.json
+*.log
