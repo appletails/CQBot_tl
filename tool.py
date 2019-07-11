@@ -208,19 +208,15 @@ def showPk(val=""):
             if j > 0:
                 # print(newPk[j-1]["money"],newPk[j]["money"])
                 cha1 = round((newPk[j-1]["money"] - newPk[j]["money"]), 2)
-                msg += "\n第%s小队：￥%s 与上一小队相差 ￥%s\n" % (
-                    str(ind), str(item["money"]), str(cha1))
+                msg += "\n\n第%s小队：￥%s 与上一小队相差 ￥%s" % ( str(ind), str(item["money"]), str(cha1))
             else:
-                msg += "\n第%s小队：￥%s\n" % (str(ind), str(item["money"]))
+                msg += "\n\n第%s小队：￥%s" % (str(ind), str(item["money"]))
             for i, idol in enumerate(item["list"]):
                 if i > 0:
-                    cha2 = round(
-                        (item["list"][i-1]["money"] - item["list"][i]["money"]), 2)
-                    msg += "No.%s %s ￥%s 与上一名相差 ￥%s\n" % (
-                        str(n), idol["name"], str(idol["money"]), str(cha2))
+                    cha2 = round( (item["list"][i-1]["money"] - item["list"][i]["money"]), 2)
+                    msg += "\nNo.%s %s ￥%s 与上一名相差 ￥%s" % ( str(n), idol["name"], str(idol["money"]), str(cha2))
                 else:
-                    msg += "No.%s %s ￥%s\n" % (str(n),
-                                               idol["name"], str(idol["money"]))
+                    msg += "\nNo.%s %s ￥%s" % (str(n), idol["name"], str(idol["money"]))
                 n += 1
             n = 1
             ind += 1

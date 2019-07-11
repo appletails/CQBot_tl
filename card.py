@@ -120,7 +120,7 @@ def card(DrawNum, user):
         cardIntegral = str(msgList[0]) + '张重复卡转为' + str(msgList[2]) + \
             "积分。当前积分" + str(user["integral"]) + "。"
 
-    msg = '共抽卡' + str(DrawNum) + '次，\n'+cardIntegral+'\n抽得新卡' + msgCard
+    msg = '\n\n共抽卡' + str(DrawNum) + '次，\n'+cardIntegral+'\n抽得新卡' + msgCard
     msgArr = [user, msg]
     return msgArr
     

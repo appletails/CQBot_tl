@@ -245,7 +245,7 @@ def newOrder(stamp10, secondsDelay):
                     "金额：¥ " + str(newOrder['backer_money']) + '\n' +\
                     "项目：" + pro_id_dict['name'] + "\n" +\
                     "链接：" + pro_id_dict['url_short'] + "\n" +\
-                    "感谢"+newOrder['nickname']+"对" + setting.idol_name() + "的支持呦~\n" + \
+                    "感谢"+newOrder['nickname']+"对" + setting.idol_name() + "的支持呦~" + \
                     tool.relay(newOrder['backer_money']) +\
                     card.DrawCard(newOrder["user_id"],newOrder["nickname"],newOrder["backer_money"])
                 if str(pro_id_dict['pro_id']) == str(setting.openjson('ini')['modian']['pk']) or (setting.openjson('ini')['pk']['status'] and not(setting.openjson('ini')['modian']['pk'])):
