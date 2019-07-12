@@ -15,6 +15,9 @@ bot = CQHttp(api_root='http://127.0.0.1:5700/')
 #              secret='your-secret')
 # 如果设置了access_token和secret，请修改http-API插件的配置文件中对应的部分
 
+# 获取酷q版本
+version_dict = bot.get_version_info()
+version = version_dict['coolq_edition']
 robot = "机器人"
 # 群消息操作
 @bot.on_message('group')
@@ -35,15 +38,17 @@ def handle_msg(context):
         if context['message'] in ['集资','jz','打卡','摩点','Jz']:
             jz_array = modian.md_init(setting.pro_id())
             for item in jz_array:
-                jz = [
-                    {'type': 'share', 'data': {
-                        "url": item['url_short'],
-                        "title": item['name'],
-                        "content": "谢谢大家的支持~比心心~",
-                        # "image": "https://s.moimg.net/activity/images/modian_icon.png"
-                        "image": "https://p.moimg.net/ico/2019/04/09/20190409_1554800123_9103.jpg?imageMogr2/auto-orient/strip"
-                    }}
-                ]
+                if version == "pro":
+                    jz = [
+                        {'type': 'share', 'data': {
+                            "url": item['url_long'],
+                            "title": item['name'],
+                            "content": "谢谢大家的支持~比心心~",
+                            "image": "https://p.moimg.net/ico/2019/04/09/20190409_1554800123_9103.jpg?imageMogr2/auto-orient/strip"
+                        }}
+                    ]
+                else:
+                    jz ='%s\n%s\n谢谢大家的支持~比心心~' % (item['name'],item['url_short'])
                 bot.send(context, jz)
                 time.sleep(.1)
         elif context['message'] in ['Rank','rank','集资榜']:

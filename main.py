@@ -23,9 +23,6 @@ firstcheck_weibo = True
 # 查询时间间隔初始化
 interval_md = md_interval()
 
-# 获取酷q版本
-version_dict = bot.get_version_info()
-version = version_dict['coolq_edition']
 
 
 def getModian():
